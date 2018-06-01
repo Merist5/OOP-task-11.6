@@ -1,1 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
 
+$white: #fff;
+$grey: #ccc;
+$purple: #a366ff;
+$flex: flex;
+$radius: 5px;
+$height: auto;
+$width: 100%;
+
+
+* {
+  font-family: 'Pacifico', cursive;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #FAD1FF;
+}
+
+#board {
+  width: $width;
+  height: $height;
+  text-align: center;
+  display: $flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+  h1 {
+    width: 400px;
+    height: $height;
+    color: #85E3FF;
+    border: 7px solid #CCAAFF;
+    border-radius: $radius;
+  }
+  button {
+  cursor: pointer;
+  border-radius: $radius;
+  color: $white;
+  background-color: #66ccff;
+  display: $flex;
+  }
+  .create-column {
+  font-size: 20px;
+  padding: 10px;
+  border-radius: $radius;
+  display: $flex;
+  justify-content: center;
+  }
+  .column-container {
+  width: 1400px;
+  height: 100%;
+  margin-top: 30px;
+  border: 5px solid $purple;
+  border-radius: $radius;
+  display: $flex;
+  flex-direction: row;
+  }
+}
+
+.column {
+  width: $width;
+  border: 3px solid $purple;
+  border-radius: 1px;
+  display: $flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  ul {
+    width: $width;
+    list-style-type: none;
+    display: $flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    background: rgba(0, 0, 0, 0.1);
+    width: 70%;
+    height: $height;
+    border: 5px solid $purple;
+    border-radius: $radius;
+    margin: 10px;
+    padding: 10px;
+    cursor: move;
+    display: $flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-self: flex-start;
+  }
+}
+  
+.card-placeholder {
+  width: 70%;
+  border-radius: $radius;
+  border: 3px dotted $grey;
+  margin: 10px;
+  padding: 50px;
+  display: $flex;
+  flex-direction: column;
+  align-self: flex-start;
+}
+
+.add-card {
+  width: 25%;
+  padding: 10px;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.btn-delete {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 5px;
+  display: $flex;
+}
